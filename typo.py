@@ -1,0 +1,1 @@
+print("center, centre, gi")
