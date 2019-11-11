@@ -1,6 +1,11 @@
-name: Python application
+name: Python Runner
 
 on: [push]
+
+inputs:
+  filepath:
+    description: 'File path'
+    required: true
 
 jobs:
   build:
@@ -19,4 +24,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Code
       run: |
-        python hoi.py
+        python "${INPUT_FILEPATH}"
